@@ -12,7 +12,7 @@ class Ftn_Entity
     @ColumnInfo(name = "days")
     var day:Int,
 
-    @ColumnInfo(name = "EMP_STEP")
+    @ColumnInfo(name = "FTN_STEP")
     var ftn_step:Int?,
 
     @ColumnInfo(name = "EMP_SLEEP")

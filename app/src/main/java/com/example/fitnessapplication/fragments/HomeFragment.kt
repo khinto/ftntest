@@ -33,20 +33,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
 
 
-
-
-
-
-
-
-
-
-
             var data = Ftn_Entity(DAY,steps, sleep, weight)
 
 
 
             App.instance.db.getftnDAO().insert(data)
+
+
 
             App.instance.db.getftnDAO().readFtn().forEach {
                 Log.i("@newdata", "Day:${DAY}")

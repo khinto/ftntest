@@ -20,5 +20,8 @@ interface Ftn_DAO
         @Query("select * from Ftn_Entity")
         fun readFtn():List<Ftn_Entity>
 
+        @Query("SELECT FTN_STEP FROM Ftn_Entity WHERE days = (SELECT MAX(days) FROM Ftn_Entity)")
+        fun lastday():Int
+
     }
 
