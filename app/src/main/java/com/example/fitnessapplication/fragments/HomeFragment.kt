@@ -1,6 +1,5 @@
 package com.example.fitnessapplication.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,8 +10,6 @@ import com.example.fitnessapplication.R
 import com.example.fitnessapplication.room.App
 import com.example.fitnessapplication.room.Ftn_Entity
 import kotlinx.android.synthetic.main.fragment_home.*
-import java.lang.Integer.toString
-import java.util.Arrays.toString
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var navController: NavController
@@ -32,8 +29,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             var weight = edit_weight.text.toString().toInt()
 
 
+             var km=0
+             var cal=0
+             var speed=0
+             var activtime=0
 
-            var data = Ftn_Entity(DAY,steps, sleep, weight)
+
+
+
+            var data = Ftn_Entity(DAY,steps, sleep, weight, km, cal, speed, activtime)
 
 
 
